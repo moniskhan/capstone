@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Points Demo!</title>
+    <link rel="stylesheet" href="css/ext/bootstrap.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+
+<div id="header">
+    <div id="header_title">Netflix and Chill!</div>
+    <div id="header_text"></div>
+</div>
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+
+<script src="js/ext/underscore.js"></script>
+<script src="js/users.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

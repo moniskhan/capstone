@@ -1,0 +1,25 @@
+.user_list {
+	display: flex;
+	flex-direction: column;
+}
+
+.user_entry {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+    spacing: 50px;
+};
+
+div.user_entry div {
+	background-color: pink;
+}
+
+.botton_row_buttons {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 1em;
+	justify-content: center;
+    align-items: center;	
+};
