@@ -1,0 +1,15 @@
+{
+  "name": "capstone",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular": "*",
+    "angular-resource": "*",
+    "angular-route": "*",
+    "angular-ui-router": "*",
+    "jquery": "*",
+    "underscore": "*",
+    "bootstrap": "*",
+    "angularjs-slider": "*"
+  }
+}

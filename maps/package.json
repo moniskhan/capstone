@@ -1,0 +1,17 @@
+{
+  "name": "capstone",
+  "version": "0.0.1",
+  "description": "Capstone mapping component",
+  "main": "index.js",
+  "scripts": {
+    "start_server": "json-server ./server/index.js --routes ./server/routes.json",
+    "start_client": "http-server ./web"
+  },
+  "dependencies": {
+    "json-server": "*",
+    "Faker": "*",
+    "underscore": "*",
+    "http-server": "*"
+  },
+  "license": "MIT"
+}

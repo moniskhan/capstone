@@ -1,2 +1,4 @@
 .idea/
 capstone.iml
+./maps/node_modules/
+./maps/web/bower_components/

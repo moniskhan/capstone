@@ -1,0 +1,28 @@
+
+.angular-google-map,
+.angular-google-map-container {
+  width: 720px;
+  height: 480px;
+  display: block;
+}
+
+
+.circle{
+    width:21px;
+    height:21px;
+    background: green;
+    padding: 3px;
+    border-radius: 100%;
+    color: white;
+    text-align:center;
+}
+
+.me {
+    width:25px;
+    height:25px;
+    background: red;
+    padding: 3px;
+    color: white;
+    font-size: 16px;
+    text-align:center;
+}
