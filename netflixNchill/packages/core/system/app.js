@@ -32,7 +32,7 @@ SystemPackage.register(function(app, auth, database, circles) {
   if(config.favicon) {
     app.use(favicon(config.favicon));
   } else {
-    app.use(favicon(__dirname + '/public/assets/img/favicon.ico'));
+    app.use(favicon(__dirname + '/public/assets/img/favicon2.ico'));
   }
 
   // Adding robots and humans txt

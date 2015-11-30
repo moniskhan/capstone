@@ -45,6 +45,17 @@ footer p {
 .featuredpic img{
   width:510px;
 }
+
+.image {
+    width: 300px;
+    height: 200px;
+}
+
+.image_grid {
+    float: left;
+    margin: 10px;
+}
+
 /*.ng-invalid.ng-dirty{*/
     /*border-color:#FA787E;*/
 /*}*/
