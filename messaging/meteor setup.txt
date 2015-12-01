@@ -1,0 +1,17 @@
+- install meteor: https://install.meteor.com/windows or curl https://install.meteor.com/ | sh
+- remove the final backslash from envrionment variabl PATH (if on Windows 7)
+
+The first two commands below should run the code: http://localhost:3000/random
+cd messaging
+meteor
+meteor mongo
+meteor add anti:fake
+meteor add dburles:factory
+// install robomongo
+Lines 11-13 might not be needed if registration/login done elsewhere
+meteor add accounts-base accounts-password accounts-ui
+meteor add accounts-facebook
+meteor add email
+meteor remove autopublish
+meteor remove insecure
+meteor add iron:router
