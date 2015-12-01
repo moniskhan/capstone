@@ -27,8 +27,60 @@
             <p>Don't have an account?</p>
             <a ui-sref='auth.register' >Sign up</a>
         </div>
-        <div class="woman_ninja_bottom">
-            <img src="/theme/assets/img/woman_ninja.png" alt="#">
+        <div class="test">
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" autologoutlink="true">
+            </fb:login-button>
         </div>
     </form>
 </div>
+
+
+<script>
+function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+
+    if (response.status === 'connected') {
+        // Logged into your app and Facebook.
+        loginSuccess();
+    } else if (response.status === 'not_authorized') {
+    } else {
+    }
+}
+
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+}
+
+window.fbAsyncInit = function() {
+    FB.init({
+        appId      : '909342032470104',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v2.5'
+    });
+
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+
+};
+
+// Load the SDK asynchronously
+(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+function loginSuccess() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+        console.log('Successful login for: ' + response.name + response);
+    });
+}
+</script>
