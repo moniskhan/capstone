@@ -1,14 +1,14 @@
 Abstract:
 	The selected endeavour chosen for the capstone project, currently called Common Room, is a web application which
-allows users to connect with others in close proximity who wish to participate in an event together, and are 
-looking for friendly company. The mission for the project is to experience entertainment socially, initially
+allows users to connect with others in close proximity who wish to experience/ consume video-based entertainment communally,
+and are looking for friendly company. The mission for the project is to experience entertainment socially, initially
 focusing on matching users who wish to share a viewing experience with others who share their interests and
-enthusiasm.
+enthusiasm, primarly targetting enthusiasts/fans of particular shows/movies etc.
 	Hence, the target user story involves users posting an event on the app, specifying the movie/telivized event
 they wish to view with others, and allowing other users within close proximity with similarly indicated interests
 to contact them and schedule a social gathering in which they can experience the viewing more socially, by
 meeting others who share their interests. The app facilitates these connections and interactions by having 
-in-app messaging capabilities, as well as tracking explicitly indicated and inferred interests of the user to
+in-app messaging capabilities, as well as tracking, explicitly indicated and inferred, interests of the user to
 determine which events to serve/recommend to each user. The user can choose to reject or show interest in certain 
 events to help us better understand their interests.
 
@@ -38,3 +38,6 @@ User story flow:
 Potential extensions to user story:
 Provide the service for different contexts (academic - match people taking same courses, going into same program, wanting to form a group, people going to the same destination, televised sporting/e-sports events, Dining,
 any activity that requires potential social interaction with people)
+
+
+
