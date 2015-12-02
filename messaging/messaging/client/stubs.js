@@ -12,7 +12,7 @@ Meteor.methods({
 
   newEvent: function (occurence) {
   	var num = Math.random(); // this will get a number between 0 and 1.
-	num *= Math.floor(Math.random()*2) == 1 ? 1 : -1; // this will add minus sign in 50% of cases
+	  num *= Math.floor(Math.random()*2) == 1 ? 1 : -1; // this will add minus sign in 50% of cases
 
     occurence.timestamp = Date.now();
     occurence.user = Meteor.userId();

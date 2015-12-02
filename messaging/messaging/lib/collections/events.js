@@ -1,1 +1,1 @@
-Events = new Mongo.Collection("events");
+Shows = new Mongo.Collection("shows");

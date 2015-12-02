@@ -3,6 +3,12 @@ Template.messages.helpers({
   messages: Messages.find({})
 });
 
+Template.shows.helpers({
+    shows: function () {
+        return Events.find();
+    }
+});
+
 // User registration requires username and email
 Accounts.ui.config({
     passwordSignupFields: 'USERNAME_AND_EMAIL'

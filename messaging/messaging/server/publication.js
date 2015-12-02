@@ -13,6 +13,6 @@ Meteor.publish('channels', function () {
     return Channels.find();
 });
 
-Meteor.publish('events', function () {
-    return Events.find();
+Meteor.publish('shows', function () {
+    return Shows.find();
 });
