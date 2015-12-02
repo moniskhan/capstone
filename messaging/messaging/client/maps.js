@@ -59,7 +59,7 @@ if (Meteor.isClient) {
           list.push({
             location: {
               lng: baseLocation.lng + randNum(-0.05, 0.05),
-              lat: baseLocation.lat + + randNum(-0.05, 0.05)
+              lat: baseLocation.lat + randNum(-0.05, 0.05)
             }
         });
       }
@@ -67,9 +67,23 @@ if (Meteor.isClient) {
   }
 
   function searchEvents(query) {
-    return generateList();
-  }
+    showsList = Shows.find();
+    var list = [];
 
+    showsList.observe({
+      added: function (doc) {
+        list.push({
+            location: {
+              lng: doc.longitude,
+              lat: doc.latitude
+            }
+        });
+        // Add code to refresh heat map with the updated airportArray
+      }
+    });
+    
+    return list;
+  }
 
 
   Template.body.events({

@@ -7,6 +7,10 @@ Meteor.startup(function() {
     password: "testpass"
   });
 
+  function randNum(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
   Factory.define('message', Messages, {
     text: function() {
     	return Fake.sentence();
@@ -20,8 +24,12 @@ Meteor.startup(function() {
     user: Meteor.users.findOne()._id,
     nameShow: "Dr. Who",
     counter: 0,
-    latitude: 43.4667,
-    longitude: -80.5167,
+    latitude: function() {
+      return 43.4667 + randNum(-0.5, 0.5);
+    },
+    longitude: function() {
+      return -80.5167 + randNum(-0.5, 0.5);
+    },
     timestamp: Date.now()
   });
 
