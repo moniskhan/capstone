@@ -1,7 +1,12 @@
 Router.route('/add', function() {
 	this.layout('landingTemplate');
 	this.render('add');
-})
+});
+
+Router.route('/maps', function() {
+    this.layout('mapsTemplate');
+    this.render('maps');
+});
 
 Router.route('/', function() {
 	this.layout('landingTemplate');
@@ -13,3 +18,5 @@ Router.route('/:channel', function () {
 	this.layout('app');
 	this.render('messages');
 });
+
+
