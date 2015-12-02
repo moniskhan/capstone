@@ -106,6 +106,11 @@ body {
 /* line 31, ../tests/sass/_layout.scss */
 .main {
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
 }
 
 /* line 35, ../tests/sass/_layout.scss */
@@ -135,6 +140,7 @@ body {
 }
 
 .channel-menu {
+  height: 54px;
   background-color: #C62828;
   border-bottom: 1px solid #420000;
   display: flex;
@@ -395,7 +401,24 @@ body {
 
 #login-buttons {
   color: #fff;
-  padding-right: 2em;
+  width: 100px;
+  color: #ffffff;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  height: 50px;
+}
+
+#login-buttons a, .accounts-dialog a{
+  text-decoration: none;
+}
+
+.login-link-and-dropdown-list {
+  height: inherit;
+}
+
+.login-link-and-dropdown-list:hover {
+    background-color: #E53935;
 }
 
 #login-dropdown-list {
@@ -408,10 +431,13 @@ body {
   text-decoration: none;
 }
 
+.login-link-text:hover {
+  color: #FFFFFF;
+}
+
 #site_header {
   position: relative;
-  height: 50px;
-  padding: 5px 0;
+  height: 53px;
   background: #C62828;
   border-bottom: 1px solid #420000;
   display: flex;
@@ -468,16 +494,18 @@ body {
   display: block;
   color: white;
   text-decoration: none;
+  height: 50px;
   width: 100px;
   color: #ffffff;
   margin-left: 30px;
-  line-height: 49px;
+  line-height: 50px;
   text-align: center;
   text-decoration: none;
 }
 
 .header_item:hover {
-  background-color: #ff5c33;
+  background-color: #E53935;
+  color: #FFFFFF;
   text-decoration: none;
   /*border-bottom: 1px solid #420000;*/
 }
