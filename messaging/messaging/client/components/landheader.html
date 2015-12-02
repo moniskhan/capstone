@@ -1,12 +1,16 @@
 <template name="landheader">
 	<div class="landheader">
 		<div id="site_header">
+			<div>
+				<ul id="site_header_menu">
+					<li><a id="header_main" href="/">Chill'n'Flix</a></li>
+				
 
-			<!-- <form action="/search" id="header_search" method="get" role="search">
-				<input autocomplete="off" class="text" id="query" placeholder="Search" tabindex="99">
-			</form> -->
-			<span >Netflix and Chill</span>
-			<span class="text">Log In</span>
+					<li><a class="header_item" href="add">Add Show</a></li>
+				</ul>
+			</div>
+
+			<span>{{> loginButtons}}</span>
 		</div>
 	</div>
 </template>

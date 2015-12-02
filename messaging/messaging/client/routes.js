@@ -1,8 +1,11 @@
+Router.route('/add', function() {
+	this.layout('landingTemplate');
+	this.render('add');
+})
+
 Router.route('/', function() {
 	this.layout('landingTemplate');
 	this.render('landing');
-	
-	
 });
 
 Router.route('/:channel', function () {
