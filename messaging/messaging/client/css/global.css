@@ -444,14 +444,46 @@ body {
 
 .image_grid {
   float: left;
-   margin: 10px;
+  margin: 10px;
 }
 
 #site_header_name {
+  float: left;
   padding: 0 .5em 0 16px;
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: 900;
   line-height: 53px;
   text-align: center;
+}
+
+.header_item {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.header_item:hover {
+  color:black;
+}
+
+#header_main {
+  display: block;
+  /*float: left;*/
+  padding: 0 .5em 0 16px;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 53px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#site_header_menu {
+  list-style-type: none;
+  height: 50px;
+}
+
+#site_header_menu li{
+  float: left;
 }
