@@ -1,0 +1,40 @@
+Abstract:
+	The selected endeavour chosen for the capstone project, currently called Common Room, is a web application which
+allows users to connect with others in close proximity who wish to participate in an event together, and are 
+looking for friendly company. The mission for the project is to experience entertainment socially, initially
+focusing on matching users who wish to share a viewing experience with others who share their interests and
+enthusiasm.
+	Hence, the target user story involves users posting an event on the app, specifying the movie/telivized event
+they wish to view with others, and allowing other users within close proximity with similarly indicated interests
+to contact them and schedule a social gathering in which they can experience the viewing more socially, by
+meeting others who share their interests. The app facilitates these connections and interactions by having 
+in-app messaging capabilities, as well as tracking explicitly indicated and inferred interests of the user to
+determine which events to serve/recommend to each user. The user can choose to reject or show interest in certain 
+events to help us better understand their interests.
+
+Motivation:
+	An increasing need for this type of service has emerged as fewer people watch scheduled, traditional cable/live
+telivision resulting in the loss of assured communal viewing, especially with the rise in popularity for
+on-demand services, Hulu, Netflix, etc. Although this provides individual flexibility, it has contributed to an
+epidemic of "spoilers" on social media, and the inability to openly discuss "that climatic episode" or "the big
+game last night" with peers, cultivating a more isolationist society. The goal here is to regain some of that
+lost comradery and garner discussion.
+
+Technical:
+	Initially, we will be developing a web app, using MeteorJS, and parts of the MEAN stack, although a native
+mobile app for Android and iOS is planned for the future. The key technical challenges will involve matching
+algorithms which can intelligently determine which users would match, as well as recommendation algorithms
+(recommendations obtained via web scraping and crowd sourcing). A ranking system will also be implemented to 
+encourage interactive input and engagement from the users via gamification.
+
+User story flow:
+- Post what you are doing
+- Someone else sees it and happens to be wanting to do the same thing at the same time
+- Connect, and message interested party to experience the act/activity (show, movie, sports, political event)
+  together and have company (could be a group of people)
+- Meet in person to participate in the activity “at the pub - gathered with strangers” atmosphere?
+- Rate the experience
+
+Potential extensions to user story:
+Provide the service for different contexts (academic - match people taking same courses, going into same program, wanting to form a group, people going to the same destination, televised sporting/e-sports events, Dining,
+any activity that requires potential social interaction with people)
