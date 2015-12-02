@@ -1,12 +1,14 @@
 <template name="show">
 	<div class="show">
 		<img class="image" src="img/tv.png">
-		<span class="event_user">{{usernameFromId user}}</span>
-		<a href="" class="event_name">{{nameShow}}</a>
-		<span class="event_timestamp">{{timestampToTime timestamp}}</span>
-		<span>
-		    <span class="prefix">Number of people interested:</span>
-		    <span class="event_name">{{counter}}</span>
-		</span>
+		<div class="show_label_text">
+			<span class="event_user">{{usernameFromId user}}</span>
+			<a href="" class="event_name">{{nameShow}}</a>
+			<span class="event_timestamp">{{timestampToTime timestamp}}</span>
+			<span>
+			    <span class="prefix">Number of people interested:</span>
+			    <span class="event_name">{{counter}}</span>
+			</span>
+		</div>
 	</div>
 </template>

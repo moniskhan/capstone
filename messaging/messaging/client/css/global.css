@@ -106,11 +106,6 @@ body {
 /* line 31, ../tests/sass/_layout.scss */
 .main {
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-around;
-  align-items: center;
 }
 
 /* line 35, ../tests/sass/_layout.scss */
