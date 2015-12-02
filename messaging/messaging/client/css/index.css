@@ -1,0 +1,23 @@
+.shows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+}
+
+.show {
+  width: 400px;
+  padding: 10px;
+}
+
+.image {
+  margin-left: 50px;
+  height: 300px;
+  width: 300px;
+}
+
+.show_label_text {
+  width: inherit;
+  text-align: center;
+}
