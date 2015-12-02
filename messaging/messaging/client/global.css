@@ -76,13 +76,22 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
-/* line 16, ../tests/sass/_layout.scss */
 body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.room {
   height: 100%;
   width: 100%;
   margin: 0;
   padding-top: 53px;
   padding-bottom: 64px;
+}
+
+.landing {
+
 }
 
 /* line 23, ../tests/sass/_layout.scss */
@@ -390,4 +399,46 @@ body {
 #login-dropdown-list {
   top: 30px;
   left: -170px;
+}
+
+#site_header {
+  position: relative;
+  height: 50px;
+  padding: 5px 0;
+  background: #fff;
+}
+
+#site_footer {
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.landingsite {
+  padding-top: 0;
+}
+
+#header_search {
+  float: right;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+  width: 940px;
+}
+
+#header_search .text {
+  width: 200px;
+  margin: 0;
+  background-image: url(/public/img/header_search.svg);
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  text-indent: 20px;
+}
+
+#site_header .text {
+  float: right;
+}
+
+.image_grid {
+    float: left;
+    margin: 10px;
 }
