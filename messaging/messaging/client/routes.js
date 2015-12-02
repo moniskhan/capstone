@@ -18,3 +18,4 @@ Router.route('/:channel', function () {
 	this.layout('app');
 	this.render('messages');
 });
+

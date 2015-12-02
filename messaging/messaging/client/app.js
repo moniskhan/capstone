@@ -5,7 +5,7 @@ Template.messages.helpers({
 
 Template.shows.helpers({
     shows: function () {
-        return Events.find();
+        return Shows.find();
     }
 });
 
@@ -57,5 +57,6 @@ Template.channel.helpers({
 	}
 });
 
+Meteor.subscribe('shows'); // Get messages
 Meteor.subscribe('messages'); // Get messages
 Meteor.subscribe('allUsernames'); // get usernames associated with messages
