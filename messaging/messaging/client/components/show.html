@@ -1,0 +1,12 @@
+<template name="event">
+	<div class="event">
+		<img class="image" src="img/tv.png">
+		<span class="event_user">{{usernameFromId user}}</span>
+		<a href="" class="event_name">{{name}}</a>
+		<span class="event_timestamp">{{timestampToTime timestamp}}</span>
+		<span>
+		    <span class="prefix">Number of people interested:</span>
+		    <span class="event_name">{{counter}}</span>
+		</span>
+	</div>
+</template>
