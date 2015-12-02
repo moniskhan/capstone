@@ -15,6 +15,7 @@ meteor add email
 meteor remove autopublish
 meteor remove insecure
 meteor add iron:router
+meteor add dburles:google-maps
 
 Order in which things are specified:
 1. HTML template files are always loaded before everything else

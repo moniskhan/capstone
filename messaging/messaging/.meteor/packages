@@ -24,3 +24,4 @@ accounts-ui
 accounts-facebook
 email
 iron:router
+dburles:google-maps
