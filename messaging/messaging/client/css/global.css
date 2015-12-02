@@ -460,7 +460,7 @@ body {
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: 900;
-  line-height: 53px;
+  line-height: 50px;
   text-align: center;
 }
 
@@ -468,20 +468,27 @@ body {
   display: block;
   color: white;
   text-decoration: none;
+  width: 100px;
+  color: #ffffff;
+  margin-left: 30px;
+  line-height: 49px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .header_item:hover {
-  color:black;
+  background-color: #ff5c33;
+  text-decoration: none;
+  /*border-bottom: 1px solid #420000;*/
 }
 
 #header_main {
   display: block;
-  /*float: left;*/
   padding: 0 .5em 0 16px;
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: 900;
-  line-height: 53px;
+  line-height: 49px;
   text-align: center;
   text-decoration: none;
 }
