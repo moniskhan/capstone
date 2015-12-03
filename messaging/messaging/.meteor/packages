@@ -25,3 +25,5 @@ accounts-facebook
 email
 iron:router
 dburles:google-maps
+tsega:bootstrap3-datetimepicker
+twbs:bootstrap
