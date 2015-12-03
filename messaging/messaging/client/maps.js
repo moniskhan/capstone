@@ -67,16 +67,23 @@ if (Meteor.isClient) {
   }
 
   function searchEvents(query) {
-    showsList = Shows.find();
+    if (query == null) {
+      showsList = Shows.find({});
+    } else {
+      showsList = Shows.find(query);
+    }
+    
     var list = [];
 
     showsList.observe({
       added: function (doc) {
         list.push({
             location: {
-              lng: doc.longitude,
-              lat: doc.latitude
-            }
+              lng: doc.loc[0],
+              lat: doc.loc[1]
+            },
+            nameShow: doc.nameShow,
+            counter: doc.counter
         });
         // Add code to refresh heat map with the updated airportArray
       }
@@ -86,21 +93,34 @@ if (Meteor.isClient) {
   }
 
 
-  Template.body.events({
-    "submit .new-task": function (event) {
+  Template.mapsSearchForm.events({
+    "submit form": function (event) {
       // Prevent default browser form submit
       event.preventDefault();
- 
-      // Get value from form element
-      var text = event.target.text.value;
-    
-      eventsList = searchEvents(text);
+  
+      var searchParams = {};
+
+      var showName = event.target.showName.value;
+      if (showName != null && showName != '') 
+        searchParams['showName'] = showName;
+
+      if (myLocation != null) {
+        // slider value in km
+        searchParams['loc'] = {
+          '$near': [myLocation.lng(), myLocation.lat()],
+          '$maxDistance': event.target.locationRange.value / 111.12 // radians
+        };
+      }
+
+      console.log(searchParams);
+
+      eventsList = searchEvents(searchParams);
       updateMap();
 
-      // Clear form
-      event.target.text.value = "";
     }
   });
+
+
 
 
 
@@ -112,8 +132,6 @@ if (Meteor.isClient) {
                           '<i class="fa fa-flag fa-stack-1x"></i>'+
                           '</span>';
       
-      console.log(object.location);
-
       var options = {
           position: new google.maps.LatLng(object.location.lat, object.location.lng),
           map: GoogleMaps.maps.exampleMap.instance,
@@ -133,6 +151,7 @@ if (Meteor.isClient) {
 
 
   function addToCluster(list) {
+      console.log("total markers found: " + list.length);
       for (var i = 0; i < list.length; i++) {
         addToMarkers(list[i]);
       }
@@ -177,14 +196,13 @@ if (Meteor.isClient) {
   }
 
   function markerSelected(obj) {
+    console.log(obj);
     function windowContent(object, position) {
         var container = document.createElement('div');
         var event = document.createElement('div');
-        event.innerHTML = '<b>Event: </b>' + '<br/>';
-        var owner = document.createElement('div');
-        owner.innerHTML = '<b>Owner: </b>' + '<br/>';
-        var particients = document.createElement('div');
-        particients.innerHTML = '<b>Particients: </b> 99 <br/>';
+        event.innerHTML = '<b>Event: </b>' + obj.nameShow + '<br/>';
+        var participants = document.createElement('div');
+        participants.innerHTML = '<b>Participants: </b>' + obj.counter + '<br/>';
         var route = document.createElement('button');
         route.innerHTML = 'Route';
 
@@ -193,8 +211,7 @@ if (Meteor.isClient) {
         }
 
         container.appendChild(event);
-        container.appendChild(owner);
-        container.appendChild(particients);
+        container.appendChild(participants);
         container.appendChild(route);
 
         return container;

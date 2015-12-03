@@ -24,11 +24,9 @@ Meteor.startup(function() {
     user: Meteor.users.findOne()._id,
     nameShow: "Dr. Who",
     counter: 0,
-    latitude: function() {
-      return 43.4667 + randNum(-0.5, 0.5);
-    },
-    longitude: function() {
-      return -80.5167 + randNum(-0.5, 0.5);
+    loc: function() {
+      // format [<longitude, latitude>]
+      return [-80.5167 + randNum(-0.15, 0.15), 43.4667 + randNum(-0.15, 0.15)];
     },
     timestamp: Date.now()
   });
