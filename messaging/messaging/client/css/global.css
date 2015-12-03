@@ -161,6 +161,8 @@ body {
   font-weight: 500;
 }
 
+
+
 /* line 1, ../tests/sass/components/_main.scss */
 .listings {
   height: 100%;
@@ -207,11 +209,6 @@ body {
   color: #AD3333;
 }
 
-.channel_name {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* line 26, ../tests/sass/components/_listings.scss */
 .channel {
   height: 24px;
@@ -237,10 +234,23 @@ body {
   margin-top: 3px;
 }
 
+.channel_name {
+  text-decoration: none;
+  color: inherit;
+}
+
+.channel_name:hover {
+  text-decoration: none;
+}
+
+.channel_name:focus {
+  text-decoration: none;
+}
+
 /* line 51, ../tests/sass/components/_listings.scss */
 .channel.active {
   background: #FFC20F;
-  color: #000000;
+  color: #000000 !important;
   width: 100%;
 }
 
@@ -503,6 +513,11 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   /*border-bottom: 1px solid #420000;*/
+}
+
+.header_item:focus {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 #header_main {
