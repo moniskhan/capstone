@@ -197,7 +197,7 @@ body {
   margin: 0 1rem .1rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: #EF9A9A;;
+  color: #EF9A9A;
   width: 165px;
   position: relative;
 }
@@ -347,7 +347,6 @@ body {
   border-radius: 0.2rem;
   width: 48px;
   height: 48px;
-  background-image: url("https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/26a/195/105b95a.jpg");
   background-size: cover;
   margin-right: 8px;
 }
@@ -359,7 +358,9 @@ body {
   font-weight: 900;
   line-height: 1.5rem;
   margin-top: .2rem;
-  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* line 38, ../tests/sass/components/_user-menu.scss */
@@ -370,7 +371,7 @@ body {
 
 /* line 43, ../tests/sass/components/_user-menu.scss */
 .connection_status {
-  color: #AD3333;
+  color: #EF9A9A;
 }
 
 /* line 1, ../tests/sass/components/_input-box.scss */

@@ -18,6 +18,13 @@ Template.registerHelper('currentChannel', function () {
 	return Session.get('channel');
 });
 
+Template.registerHelper("username", function () {
+    var currentUser = Meteor.user();
+    if(currentUser == null)    return "Anonymous";
+    if(currentUser.username != null)   return currentUser.username;
+    return currentUser.profile.name;
+});
+
 // Get username
 Template.registerHelper("usernameFromId", function (userId) {
     var user = Meteor.users.findOne({_id: userId});
@@ -30,6 +37,13 @@ Template.registerHelper("usernameFromId", function (userId) {
         return user.services.facebook.username;
     }
     return user.username;
+});
+
+Template.registerHelper("profilePicture", function () { //We should return image in the form of Base64 from db
+    // if(Meteor.user().services.facebook) { 
+    //     return "http://graph.facebook.com/" + Meteor.user().services.facebook.id + "/picture/?type=large";
+    // }
+    return "https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg";
 });
 
 // Get time message was sent
