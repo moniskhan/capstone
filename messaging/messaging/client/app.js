@@ -21,8 +21,7 @@ Template.registerHelper('currentChannel', function () {
 Template.registerHelper("username", function () {
     var currentUser = Meteor.user();
     if(currentUser == null)    return "Anonymous";
-    if(currentUser.username != null)   return currentUser.username;
-    return currentUser.profile.name;
+    return Meteor.user().username || Meteor.user().profile.name;
 });
 
 // Get username
