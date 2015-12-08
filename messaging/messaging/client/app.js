@@ -56,7 +56,10 @@ Template.registerHelper("timestampToTime", function (timestamp) {
 
 Template.listings.helpers({
     channels: function () {
-        return Channels.find();
+        //return Channels.find();
+        return Shows.find({}, {fields: {
+            "channel": 1
+        }});
     }
 });
 

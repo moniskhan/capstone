@@ -23,6 +23,9 @@ Meteor.startup(function() {
   Factory.define('show', Shows, {
     user: Meteor.users.findOne()._id,
     nameShow: "Dr. Who",
+    channel:function() {
+      return "test" + Math.floor(Math.random()*100000);
+    },
     counter: 0,
     loc: function() {
       // format [<longitude, latitude>]
@@ -34,6 +37,7 @@ Meteor.startup(function() {
   // Add this if you want to remove all messages before seeding
   Messages.remove({});
   Shows.remove({});
+  Channels.remove({});
 
   if (Messages.find({}).count() === 0) {
     _(10).times(function(n) {
@@ -46,8 +50,7 @@ Meteor.startup(function() {
       Factory.create('show');
     });
   }
-
-  Channels.remove({});
+  
   Channels.insert({
     name: "general"
   });

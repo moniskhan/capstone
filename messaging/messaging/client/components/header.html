@@ -1,11 +1,13 @@
 <template name="header">
 	<div class="header">
-		<div class="team-menu">Chill'n'Flix</div>
+		<div class="team-menu"><a id="header_main" href="/">Chill'n'Flix</a></div>
 		<div class="channel-menu">
-			<span class="channel-menu_name">
-				<span class="channel-menu_prefix"></span>
-				{{currentChannel}}
-			</span>
+			<div>
+				<ul id="site_header_menu">
+					<li><a class="header_item" href="maps">Search Show</a></li>
+					<li><a class="header_item" href="add">Add Show</a></li>
+				</ul>
+			</div>
 			<span>
         			{{> loginButtons}}
 			</span>
