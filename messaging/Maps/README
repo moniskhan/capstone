@@ -1,0 +1,7 @@
+Google maps javascript api basic demo
+
+maps_location.html
+    - show a device's location and "other people" nearby
+
+maps_routing.html
+    - show intermediate destinations in a route

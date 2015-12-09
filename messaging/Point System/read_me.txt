@@ -1,0 +1,1 @@
+This demonstrates the exp and ranking system designed to encourage users to be more activity within this application. As users contribute to the database, they will gain exp point and accquire new titles. 

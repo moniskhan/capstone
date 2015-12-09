@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Waypoints in directions</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 700px;
+        width: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <select id="route">
+      <option value="0">Route1</option>
+      <option value="1">Route2</option>
+    </select>  
+    <button id="go" type="button">Go!</button>
+
+    <div id="map"></div>
+
+    <script src="maps_routing.js"></script>
+    <script src="ext/jquery-2.1.4.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQRRbcGrszCYCTU0qiKErSr__zBbfS5iw&callback=initMap"
+        async defer></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 700px;
+        width: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    proximity:
+    <input id="distance" type ="range" min ="1000" max="5000" step ="50" value ="100"/>
+    <div id="map"></div>
+
+    <script src="maps_location.js"></script>
+    <script src="ext/jquery-2.1.4.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQRRbcGrszCYCTU0qiKErSr__zBbfS5iw&callback=initMap&libraries=geometry"
+        async defer></script>
+  </body>
+</html>

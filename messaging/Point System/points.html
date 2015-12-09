@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Points Demo!</title>
+    <link rel="stylesheet" href="css/ext/bootstrap.css"/>
+    <link rel="stylesheet" href="css/points.css"/>
+</head>
+<body>
+
+<div id="header">
+    <div id="header_title">Users Points Demo!</div>
+    <div id="header_text">Users earn points and new rank as they interact with the community</div>
+</div>
+
+<div id="body">
+    <div id="user_list">
+    </div>
+</div>
+
+<template class="user_entry" id="user_entry">
+    <div class="user_entry_name col-sm-1"> 
+        User 1  
+    </div>
+    <div class="user_entry_rank col-sm-1"> 
+        Uber Master
+    </div>
+    <div class="user_entry_exp col-sm-1"> 
+        69696969
+    </div>
+    <button class="user_entry_comment_button">Post a comment</button>
+</template>
+
+<button type="button" class="btn btn-primary col-sm-offset-6" id="add_user_button">Add a user</button>
+<script src="js/ext/underscore.js"></script>
+<script src="js/users.js"></script>
+<script src="js/points.js"></script>
+</body>
+</html>
